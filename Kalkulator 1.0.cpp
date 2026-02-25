@@ -27,7 +27,7 @@ void penjumlahan(){
    }
 }
 void pengurangan(){
-   cout << "mode pengurangan" << endl;
+   cout << "==================" << endl << "mode pengurangan" << endl << "==================" << endl;
    while (isValid){
       cout << "Lagi? (y/n): ";
       cin >> isLagi;
@@ -82,6 +82,7 @@ void pembagian(){
 }
 int main() {
    while (isRunning){
+      isValid = true;
       while (isValid)
       {
          cout << "pilih mode (1 = penjumlahan, 2 = pengurangan, 3 = perkalian, 4 = pembagian): ";
@@ -95,23 +96,24 @@ int main() {
       switch (var_mode)
       {
       case '1':
-         penjumlahan();
          isValid = true;
+         penjumlahan();
          break;
       case '2':
-         pengurangan();
          isValid = true;
+         pengurangan();
          break; 
       case '3':
-         perkalian();
          isValid = true;
+         perkalian();
          break;
       case '4':
-         pembagian();
          isValid = true;
+         pembagian();
          break;
       default:
          break;
       }
    }
+   cout << "===================================================" << endl << "Beres";
 }
