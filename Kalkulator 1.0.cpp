@@ -3,7 +3,7 @@ using namespace std;
 
 int var_1, var_2;
 //mode
-int var_mode;
+char var_mode;
 char isLagi;
 bool isRunning = true;
 bool isValid = true; //bila input pengguna tidak valid, maka akan mengulang input
@@ -80,26 +80,33 @@ void pembagian(){
       }
    }
 }
-
 int main() {
    while (isRunning){
-      cout << "pilih mode (1 = penjumlahan, 2 = pengurangan, 3 = perkalian, 4 = pembagian): ";
-      cin >> var_mode;
+      while (isValid)
+      {
+         cout << "pilih mode (1 = penjumlahan, 2 = pengurangan, 3 = perkalian, 4 = pembagian): ";
+         cin >> var_mode;  
+         if (var_mode == '1' || var_mode == '2' || var_mode == '3' || var_mode == '4'){
+            isValid = false;
+         } else {
+            cout << "input tidak valid" << endl;
+         } 
+      }
       switch (var_mode)
       {
-      case 1:
+      case '1':
          penjumlahan();
          isValid = true;
          break;
-      case 2:
+      case '2':
          pengurangan();
          isValid = true;
          break; 
-      case 3:
+      case '3':
          perkalian();
          isValid = true;
          break;
-      case 4:
+      case '4':
          pembagian();
          isValid = true;
          break;
