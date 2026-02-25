@@ -8,8 +8,8 @@ bool isValid = true;
 char var_ngulang;
 
 int main() {
-    isValid = true;
     while (isRunning){
+        isValid = true;
         cout << "masukan panjang: ";
         cin >> var_panjang;
         // cout << "masukan lebar: ";
