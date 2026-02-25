@@ -2,6 +2,7 @@
 using namespace std;
 
 int var_1, var_2;
+float var_hasil;
 //mode
 char var_mode;
 char isLagi;
@@ -9,13 +10,22 @@ bool isRunning = true;
 bool isValid = true; //bila input pengguna tidak valid, maka akan mengulang input
 
 void penjumlahan(){
-   cout << "mode penjumlahan" << endl;
+   cout << "==================" << endl << "mode penjumlahan" << endl << "==================" << endl;
+   //mulai operasi
+   cout << "masukkan angka pertama: ";
+   cin >> var_1;
+   cout << "masukkan angka kedua: ";
+   cin >> var_2;
+   //kalkulasi
+   var_hasil = var_1 + var_2;
+   cout << "hasil: " << var_hasil << endl;
    while (isValid){
       cout << "Lagi? (y/n): ";
       cin >> isLagi;
       if (isLagi == 'y' || isLagi == 'Y'){
          isRunning = true;
          isValid = false;
+         cout << endl;
       } else if (isLagi == 'n' || isLagi == 'N'){
          isRunning = false;
          isValid = false;
@@ -28,6 +38,14 @@ void penjumlahan(){
 }
 void pengurangan(){
    cout << "==================" << endl << "mode pengurangan" << endl << "==================" << endl;
+   //mulai operasi
+   cout << "masukkan angka pertama: ";
+   cin >> var_1;
+   cout << "masukkan angka kedua: ";
+   cin >> var_2;
+   //kalkulasi
+   var_hasil = var_1 - var_2;
+   cout << "hasil: " << var_hasil << endl;
    while (isValid){
       cout << "Lagi? (y/n): ";
       cin >> isLagi;
@@ -45,7 +63,15 @@ void pengurangan(){
    }
 }
 void perkalian(){
-   cout << "mode perkalian" << endl;
+   cout << "================" << endl << "mode perkalian" << endl << "================" << endl;
+   //mulai operasi
+   cout << "masukkan angka pertama: ";
+   cin >> var_1;
+   cout << "masukkan angka kedua: ";
+   cin >> var_2;
+   //kalkulasi
+   var_hasil = var_1 * var_2;
+   cout << "hasil: " << var_hasil << endl;
    while (isValid){
       cout << "Lagi? (y/n): ";
       cin >> isLagi;
@@ -63,7 +89,15 @@ void perkalian(){
    }
 }
 void pembagian(){
-   cout << "mode pembagian" << endl;
+   cout << "================" << endl << "mode pembagian" << endl << "================" << endl;
+   //mulai operasi
+   cout << "masukkan angka pertama: ";
+   cin >> var_1;
+   cout << "masukkan angka kedua: ";
+   cin >> var_2;
+   //kalkulasi
+   var_hasil = var_1 / var_2;
+   cout << "hasil: " << var_hasil << endl;
    while (isValid){
       cout << "Lagi? (y/n): ";
       cin >> isLagi;
@@ -115,5 +149,5 @@ int main() {
          break;
       }
    }
-   cout << "===================================================" << endl << "Beres";
+   cout << "=======" << endl << "Beres" << endl << "=======" << endl;
 }
