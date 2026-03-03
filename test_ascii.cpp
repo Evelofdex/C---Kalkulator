@@ -12,12 +12,14 @@ int main() {
         isValid = true;
         cout << "masukan panjang: ";
         cin >> var_panjang;
-        // cout << "masukan lebar: ";
-        // cin >> var_lebar;
+        cout << "masukan lebar: ";
+        cin >> var_lebar;
         //kalkulasi
-        for (int i = 0; i < var_panjang; i++)
-        {
+        for (int i = 0; i < var_panjang; i++){
             cout << "*";
+        }
+        for (int i = 0; i < var_lebar; i++){
+            cout << "*" << endl;
         }
         cout << endl;
         while (isValid){
